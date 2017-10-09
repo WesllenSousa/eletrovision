@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- GERAL -->
+    <string name="geral_nomeaplicacao">EletroVision</string>
+    <string name="geral_voltar">Voltar</string>
+    <string name="geral_rede">Rede</string>
+    <string name="geral_conectando">Conectando...</string> 
+    <string name="geral_conectado">Você já está conectado</string> 
+    <string name="geral_desconectado">Desconectado!</string> 
+    <string name="geral_servidornaoencontrado">Servidor não encontrado!</string>
+    <string name="geral_acionando">Acionando...</string> 
+    <string name="geral_configurando">Configurando...</string> 
+    <string name="geral_buscando">Buscando...</string> 
+    <string name="geral_nao_conectado">Você não estar conectado!</string> 
+     
+    <!-- DIALOGS -->
+    <string name="dialog_tituloDialogSairPrograma">Deseja realmente sair?</string>
+    <string name="dialog_sim">SIM</string>
+    <string name="dialog_nao">NÃO</string>
+    <string name="dialog_nome_imagem">Nome da imagem: </string>
+    <string name="dialog_arquivo">Arquivo</string>
+    <string name="dialog_ok">OK</string>
+    <string name="dialog_cancelar">CANCELAR</string>
+    <string name="dialog_desconectar">Deseja desconectar do servidor?</string>
+    
+    <!-- TELA PRINCIPAL -->
+    <string name="principal_mensagem">Mensagem</string>
+    <string name="principal_cenario">Cenário</string>
+    <string name="principal_dispositivo">Dispositivo</string>
+    <string name="principal_camera">Câmera</string>
+    <string name="principal_conectar">Conectar</string>
+    <string name="principal_usuario">Usuários conectados</string>
+    <string name="principal_sair">Sair</string>
+    <string name="principal_logo">Eletron Vision</string>
+    <string name="principal_separador">Separador</string>
+    <string name="principal_configuracao">Configurações</string>
+    <string name="principal_ultimafoto">Última foto</string>
+    <string name="principal_ultimafotoindisponivel">Última foto indisponível!</string>
+    <string name="principal_buscandoultimafoto">Buscando última foto</string>
+    
+    <!-- TELA CONECTAR -->
+    <string name="conectar_ip">Localização do servidor (IP):</string>
+    <string name="conectar_usuario">Usuário:</string>
+    <string name="conectar_senha">Senha:</string>
+    <string name="conectar_conectar">Conectar</string>
+    <string name="conectar_barra">Conectar ao servidor</string>
+    <string name="conectar_usuarioinvalido">Usuário ou senha inválida!</string>
+    <string name="conectar_conexaosucesso">Conexão realizada com sucesso!</string>
+    <string name="conectar_usariologado">O usuário solicitado já está logado no sistema!</string>
+    
+    <!-- CONFIG CAMERA -->
+    <string name="configcamera_ativar">Ativar</string>
+    <string name="configcamera_movimento">Detectar Movimento</string>
+    <string name="configcamera_objeto">Detectar Objeto</string>
+    <string name="configcamera_face">Detectar Face</string>
+    <string name="configcamera_olhos">Detectar Olhos</string>
+    <string name="configcamera_corpo">Detectar Corpo</string>
+    <string name="configcamera_gravar">Gravar</string>
+    <string name="configcamera_dispositivos">Acionar Dispositivos</string>
+    <string name="configcamera_campanhia">Campanhia</string>
+    <string name="configcamera_reconhecerFace">Reconhecer face</string>
+    <string name="configcamera_ambienteStatico">Ambiente stático</string>
+    <string name="configcamera_adaptarAmbiente">Adaptar ao ambiente</string>
+    <string name="configcamera_mudancaAmbiente">Detectar mudança no ambiente</string>
+    <string name="configcamera_salvar">Salvar</string>
+    <string name="configcamera_cancelar">Cancelar</string>
+    <string name="configcamera_barra">Configuração da câmera</string>
+    <string name="configcamera_salvando">Salvando...</string>
+    <string name="configcamera_sucesso">Configuração salva com sucesso!</string>
+    
+    <!-- CONFIG CENARIO -->
+    <string name="configcenario_ativar">Ativar</string>
+    <string name="configcenario_nenhumacionamento">Nenhum Acionamento</string>
+    <string name="configcenario_alarme">Alarme</string>
+    <string name="configcenario_controleautomatico">Controle Automático</string>
+    <string name="configcenario_detectarface">Detectar Face</string>
+    <string name="configcenario_reconhecerface">Reconhecer Face</string>
+    <string name="configcenario_movimento">Movimento</string>
+    <string name="configcenario_salvar">Salvar</string>
+    <string name="configcenario_cancelar">Cancelar</string>
+    <string name="configcenario_barra">Configuração do cenário</string>
+    <string name="configcenario_salvando">Salvando...</string>
+    <string name="configcenario_sucesso">Configuração salva com sucesso!</string>
+    
+    <!-- MENSAGEM -->
+    <string name="mensagem_hint">Digite a mensagem.</string>
+    <string name="mensagem_enviar">Mensagem enviada</string>
+    
+    <!-- CAMERA -->
+    <string name="camera_barra">Câmeras</string>
+    <string name="camera_tirarfoto">Tirar Foto</string>
+    <string name="camera_configuracao">Configuração câmera</string>
+    <string name="camera_tirandofoto">Tirando Foto...</string>
+    <string name="camera_erro">As câmeras estão desligadas!</string>
+    <string name="camera_acesso">Nenhuma câmera cadastrada ou Acesso negado!</string>
+    
+    <!-- DISPOSITIVO -->
+    <string name="dispositivo_barra">Dispositivos</string>
+    <string name="dispositivo_ligar">Ligar/Desligar dispositivo</string> 
+    <string name="dispositivo_erro">Erro ao ativar o dispositivo!</string>
+    <string name="dispositivo_sucesso">Dispositivo ativo com sucesso!</string>
+    <string name="dispositivo_desativado">Acionamento desativado!</string>
+    <string name="dispositivo_acesso">Nenhum dispositivo cadastrado ou Acesso negado!</string>
+    
+    <!-- CENARIO -->
+    <string name="cenario_barra">Cenários</string>
+    <string name="cenario_erro">Erro ao ativar/desativar cenário!</string>
+    <string name="cenario_sucesso">Cenário alterado com sucesso!</string> 
+    <string name="cenario_desativado">Acionamento desativado!</string>
+    <string name="cenario_acionar">Acionar cenário</string>
+    <string name="cenario_configuracao">Configuração cenário</string>
+    <string name="cenario_acesso">Nenhum cenário cadastrado ou Acesso negado!</string>
+    
+    <!-- USUARIO -->
+    <string name="usuario_barra">Usuários conectados</string>
+    <string name="usuario_gps">Localização GPS</string>
+    <string name="usuario_erro_gps">GPS do usuário desligado!</string>
+    
+    <!-- VISUALIZAR IMAGEM -->
+    <string name="visualizarimagem_salvar">Imagem salva com sucesso!</string>
+    <string name="visualizarimagem_cameradesativada">Câmera desativada!</string>
+    <string name="visualizarimagem_semimagem">Não há imagem para ser salva!</string>
+    
+    <!-- OPÇÕES -->
+    <string name="opcoes_barra">Opções</string>
+    <string name="opcoes_localizacaoGPS">Enviar localização GPS</string>
+    <string name="opcoes_executarAudio">Executar áudio</string>
+    
+    <!-- SOBRE -->
+    <string name="telaSobre_versao">Versão: 1.0 Beta</string>
+    <string name="telaSobre_wesllen">
+        Autor: Wesllen Sousa Lima \n
+        Contato: wesllen.wsl@gmail.com
+    </string>
+    
+</resources>

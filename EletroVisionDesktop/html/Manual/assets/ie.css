@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.sidetop {
+	#fff background: url(side-top.png) no-repeat;
+	margin-bottom: -10px;
+}
+
+.sidebot {
+	#fff background: url(side-footer.png) no-repeat;
+	margin-bottom: 10px;
+}
+
+
+
+	
+	

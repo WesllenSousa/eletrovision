@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Movimento" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="89838145-b104-4dfb-a598-7360d8d095e6">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="qtdepessoas" class="java.lang.Integer"/>
+	<field name="qtdeobjetos" class="java.lang.Integer"/>
+	<field name="codcamera.nome" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="30cfc25a-091e-4381-bcd9-ada7b57b942b" x="217" y="23" width="132" height="38"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Movimentos]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="32df6ed4-a289-4bdf-bef0-b9f16655a37c" x="16" y="6" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="2233b577-fd70-4ee5-91a6-087c5b721bf3" x="16" y="26" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="654d37fe-e4c8-4ab7-9e5e-2939b3e7c993" x="16" y="46" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qtd de Pessoas: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="516e8773-aa95-40d9-b855-56ecaf6e150e" x="16" y="66" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Qtd de Objetos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="353c9756-b1c6-4fbe-957e-b5579a62db1a" x="16" y="86" width="100" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Camera:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="570a2751-dd51-4503-8d3c-1dd1eec313e9" x="127" y="6" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="f5687bf6-dd97-408a-944e-1d52b1180301" x="127" y="26" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{data_hms}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="9bdbb79a-1529-4879-b658-5472481a97f5" x="127" y="46" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{qtdepessoas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="94a32139-b66b-474d-8e48-94974a7c6ba1" x="127" y="66" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{qtdeobjetos}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="814f6e1e-79bc-454e-88e4-d487e4690019" x="127" y="86" width="137" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codcamera.nome} != null ? $F{codcamera.nome} : "" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="9d2d1c4a-2ca5-43b6-b29c-d663c14caf93" x="10" y="10" width="197" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3408baa1-a664-47cf-af9b-74e608426569" x="425" y="10" width="80" height="20" forecolor="#010101"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="fa1bbf6b-0dae-40f2-8da6-ab44eddc7bdd" x="505" y="10" width="40" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

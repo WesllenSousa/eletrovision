@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@drawable/fundo" >
+    
+    <RelativeLayout style="@style/estilo_topo" android:background="@drawable/fundo_topo" >
+        
+        <ImageButton 
+            android:id="@+id/telaOpcoes_bt_voltar" 
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/voltar_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/geral_voltar" />
+        
+    </RelativeLayout>
+    
+    <TextView 
+	      android:id="@+id/telaOpcoes_titulo"
+	      android:layout_width="fill_parent" android:layout_height="20sp" 
+	      style="@style/estilo_textview_divisaoLista"
+	      android:text="@string/opcoes_barra" />
+   
+   <CheckBox 
+       android:id="@+id/telaOpcoes_ck_enviarLocalizacaoGPS" 
+       android:layout_width="match_parent" android:layout_height="wrap_content" 
+       android:text="@string/opcoes_localizacaoGPS" />
+   
+   <CheckBox 
+       android:id="@+id/telaOpcoes_ck_executarAudio" 
+       android:layout_width="match_parent" android:layout_height="wrap_content" 
+       android:text="@string/opcoes_executarAudio" />
+   
+</LinearLayout>

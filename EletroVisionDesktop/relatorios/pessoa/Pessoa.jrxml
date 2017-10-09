@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Pessoa" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9608cc08-12e3-44ec-a5aa-c2e171408f3e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="diretorio" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="rg" class="java.lang.String"/>
+	<field name="cpf" class="java.lang.String"/>
+	<field name="data" class="java.util.Date"/>
+	<field name="foto" class="java.lang.String"/>
+	<title>
+		<band height="69" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="5f0437d8-f28d-40b6-8975-564bb332f931" x="168" y="18" width="239" height="33" forecolor="#010101"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pessoas Cadastradas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="123" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ea7cb920-a33a-4fb9-b7bd-7740a7cea218" x="128" y="52" width="94" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="c47cb034-17ce-4993-8a7e-56bad35a89e4" x="128" y="72" width="94" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="024fa6ee-df1e-4b6c-82ed-c805c7aa472b" x="128" y="92" width="94" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nascimento:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="fc4323a8-0da4-40d7-972f-cfd415f4d64b" x="222" y="52" width="225" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e97e4e4c-eeac-452a-b314-6d647ec07336" x="222" y="72" width="225" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{cpf}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement uuid="bff59ff3-8f86-4447-8520-8f7692385921" x="222" y="92" width="225" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{data}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="4924c349-cca1-46dc-8ca9-d00f3f7e6dd1" x="128" y="32" width="94" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="cd8439dd-95a2-49cc-b2c5-133dcef9e8c7" x="222" y="32" width="225" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="65f71cf7-f733-41f7-9842-ac6b305ab7a5" x="128" y="12" width="94" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="183d4acc-60a3-491a-a628-2f0c39c1e4a2" x="222" y="12" width="225" height="20"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="6b9f6585-14b0-42d2-a48e-87fea891b7f0" x="10" y="12" width="102" height="93"/>
+				<imageExpression><![CDATA[$P{diretorio} + "/" + $F{foto}]]></imageExpression>
+			</image>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="39" splitType="Stretch">
+			<textField>
+				<reportElement uuid="c0ef0090-0c56-46d5-95d5-b23e204e8600" x="435" y="10" width="80" height="20" forecolor="#010101"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="7d43b43f-ebdd-4893-956d-2144c1b387d7" x="10" y="10" width="197" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="fe0a6e87-6547-46d0-b314-1b023daf751a" x="515" y="10" width="40" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

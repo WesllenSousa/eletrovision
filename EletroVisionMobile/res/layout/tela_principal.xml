@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="@drawable/fundo" >
+         
+    <RelativeLayout style="@style/estilo_topo" android:background="@drawable/fundo_topo" >
+        
+        <ImageButton 
+            android:id="@+id/telaPrincipal_bt_conectar" 
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/servidor_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_conectar" />
+          
+        <ImageButton
+            android:id="@+id/telaPrincipal_bt_usuarios"
+            android:layout_centerVertical="true" android:layout_toRightOf="@+id/telaPrincipal_bt_conectar"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/usuario_36"
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_usuario" />
+        
+        <ImageButton
+            android:id="@+id/telaPrincipal_bt_sair"
+            android:layout_centerVertical="true" android:layout_alignParentRight="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/sair_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_sair" />
+        
+        <ImageButton
+            android:id="@+id/telaPrincipal_bt_configuracoes"
+            android:layout_centerVertical="true" android:layout_toLeftOf="@+id/telaPrincipal_bt_sair"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/configuracoes_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_configuracao" />
+        
+        <ImageButton
+            android:id="@+id/telaPrincipal_bt_foto"
+            android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/ultima_foto_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_ultimafoto" />
+       
+    </RelativeLayout>
+    
+    <RelativeLayout
+	    android:layout_width="match_parent" android:layout_height="match_parent" >
+        
+        <ImageButton 
+            android:id="@+id/telaPrincipal_bt_sobre"  
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/logo_simbolo"
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_logo" />
+        
+        <ImageButton 
+            android:id="@+id/telaPrincipal_bt_mensagem"  
+            android:layout_marginTop="20sp" android:layout_marginLeft="20sp"
+            android:layout_alignParentTop="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/mensagem"
+            style="@style/estilo_botao_transparente"         
+            android:contentDescription="@string/principal_mensagem" />
+        
+        <ImageButton 
+            android:id="@+id/telaPrincipal_bt_cenario" 
+            android:layout_marginTop="20sp" android:layout_marginRight="20sp"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/cenario"
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_cenario" />
+        
+        <ImageButton
+            android:id="@+id/telaPrincipal_bt_dispositivos"
+            android:layout_marginBottom="20sp" android:layout_marginLeft="20sp"
+            android:layout_alignParentBottom="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/dispositivo"  
+            style="@style/estilo_botao_transparente"
+            android:contentDescription="@string/principal_dispositivo" />
+        
+        <ImageButton 
+            android:id="@+id/telaPrincipal_bt_cameras"
+            android:layout_marginBottom="20sp" android:layout_marginRight="20sp"
+            android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/camera"
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/principal_camera" />
+        
+	</RelativeLayout>
+
+</LinearLayout>

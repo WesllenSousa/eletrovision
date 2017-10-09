@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="wsl.eletrovision"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="8" />
+    
+    <!-- Permissoes necessarias para o uso do mapa -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application android:icon="@drawable/logo_simbolo" android:label="@string/geral_nomeaplicacao" android:theme="@style/wsl_tema_fundo"  >
+        
+        <!-- Imports -->
+    	<uses-library android:name="com.google.android.maps" />
+        
+        <activity android:name=".telas.TelaPrincipal" android:label="@string/geral_nomeaplicacao" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Telas -->
+        <activity android:name=".telas.TelaCamera" />
+        <activity android:name=".telas.TelaCenario" />
+        <activity android:name=".telas.TelaConfigCamera" />
+        <activity android:name=".telas.TelaConfigCenario" />
+        <activity android:name=".telas.TelaDispositivo" />
+        <activity android:name=".telas.TelaMensagem" />
+        <activity android:name=".telas.TelaConectar" />
+        <activity android:name=".telas.TelaUsuarios" />
+        <activity android:name=".telas.TelaSobre" />
+        <activity android:name=".telas.TelaVisualizarImagem" />
+        <activity android:name="wsl.eletrovision.telas.TelaMapa" />
+        <activity android:name=".telas.TelaOpcoes" />
+        
+        <receiver android:name="wsl.eletrovision.controle.gps.ProcessoGPS">
+            <intent-filter >
+                <action android:name="PROCESSO_GPS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        
+    </application>
+
+</manifest>

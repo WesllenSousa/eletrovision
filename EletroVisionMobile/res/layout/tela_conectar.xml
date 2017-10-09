@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="@drawable/fundo" >
+
+    <RelativeLayout style="@style/estilo_topo" android:background="@drawable/fundo_topo" >
+        
+        <ImageButton 
+            android:id="@+id/telaConectar_bt_voltar" 
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/voltar_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/geral_voltar" />
+        
+    </RelativeLayout>
+    
+    <ScrollView 
+    	android:layout_width="fill_parent" android:layout_height="fill_parent"  >
+    <LinearLayout 
+	    android:layout_width="match_parent" android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+    
+    <TextView 
+	      android:id="@+id/telaConectar_tv_barra"
+	      android:layout_width="fill_parent" android:layout_height="20sp" 
+	      style="@style/estilo_textview_divisaoLista"
+	      android:text="@string/conectar_barra" 
+	      android:layout_marginBottom="10sp" />
+    
+    <TextView  
+         android:text="@string/conectar_ip" 
+         style="@style/estilo_textview_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content" /> 
+     
+     <EditText 
+         android:id="@+id/telaConectar_et_ip" 
+         style="@style/estilo_edittext_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content" 
+         android:inputType="phone" />
+     
+     <TextView 
+         android:text="@string/conectar_usuario" 
+         style="@style/estilo_textview_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content"  /> 
+     
+     <EditText 
+         android:id="@+id/telaConectar_et_usuario" 
+         style="@style/estilo_edittext_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content" 
+         android:inputType="text" />
+     
+     <TextView 
+         android:text="@string/conectar_senha" 
+         style="@style/estilo_textview_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content" /> 
+     
+     <EditText 
+         android:id="@+id/telaConectar_et_senha" 
+         style="@style/estilo_edittext_cadastro" 
+         android:layout_width="match_parent" android:layout_height="wrap_content" 
+         android:password="true" 
+         android:inputType="text" />
+     
+     <Button 
+         android:id="@+id/telaConectar_bt_conectar"
+         android:layout_width="wrap_content" android:layout_height="wrap_content" 
+         android:layout_gravity="right" android:layout_marginRight="20sp"
+         android:text="@string/conectar_conectar"
+         />
+     
+    </LinearLayout>
+    </ScrollView>
+         
+
+</LinearLayout>

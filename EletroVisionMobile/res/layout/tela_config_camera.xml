@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:background="@drawable/fundo" >
+    
+    <RelativeLayout style="@style/estilo_topo" android:background="@drawable/fundo_topo" >
+        
+        <ImageButton 
+            android:id="@+id/configCamera_bt_voltar" 
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/voltar_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/geral_voltar" />
+        
+    </RelativeLayout>
+    
+    <ScrollView 
+    	android:layout_width="match_parent" android:layout_height="match_parent" 
+    	android:padding="0px" android:fillViewport="true" >
+        
+        <LinearLayout 
+		    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:orientation="vertical" android:background="@color/transparente"
+		    >
+    
+		    <TextView 
+			      android:id="@+id/configCamera_tv_barra"
+			      android:layout_width="fill_parent" android:layout_height="20sp" 
+			      style="@style/estilo_textview_divisaoLista"
+			      android:text="@string/configcamera_barra" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_ativar" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_ativar" />
+		    
+		    <TextView 
+			      android:layout_width="fill_parent" android:layout_height="5sp" 
+			      android:background="@color/cinzaClaro" />
+		    
+		    <RadioGroup 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		        android:orientation="vertical" >
+		        
+		        <RadioButton 
+		            android:id="@+id/configCamera_rd_adaptarAmbiente" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcamera_adaptarAmbiente"  />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCamera_rd_mudancaAmbiente" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcamera_mudancaAmbiente"  />
+		        
+		    </RadioGroup>
+		    
+		    <TextView 
+			      android:layout_width="fill_parent" android:layout_height="5sp" 
+			      android:background="@color/cinzaClaro" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_movimento" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_movimento" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_ambienteStatico" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_ambienteStatico" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_objeto" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_objeto" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_dispositivos" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_dispositivos" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_campanhia" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_campanhia" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_gravar" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_gravar" />
+		    
+		    <TextView 
+			      android:layout_width="fill_parent" android:layout_height="5sp" 
+			      android:background="@color/cinzaClaro" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_face" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_face" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_olhos" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_olhos" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_corpo" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_corpo" />    
+		       
+		    <CheckBox 
+		       android:id="@+id/configCamera_ck_reconhecerFace" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcamera_reconhecerFace" />
+
+		    <LinearLayout 
+			    android:layout_width="fill_parent" android:layout_height="wrap_content"
+			    android:orientation="horizontal" android:background="@color/transparente"
+			    >
+			    
+		        <Button 
+			         android:id="@+id/configCamera_bt_salvar"
+			         android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			         android:text="@string/configcamera_salvar"
+			         />
+			    
+		        <Button 
+			         android:id="@+id/configCamera_bt_cancelar"
+			         android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			         android:text="@string/configcamera_cancelar"
+			         />
+		        
+		    </LinearLayout>
+    
+    	</LinearLayout>
+    
+    </ScrollView>
+    
+ </LinearLayout>
+

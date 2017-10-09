@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" android:background="@drawable/fundo" >
+    
+    <RelativeLayout style="@style/estilo_topo" android:background="@drawable/fundo_topo" >
+        
+        <ImageButton 
+            android:id="@+id/configCenario_bt_voltar" 
+            android:layout_centerVertical="true" android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:src="@drawable/voltar_36" 
+            style="@style/estilo_botao_transparente" 
+            android:contentDescription="@string/geral_voltar" />
+        
+    </RelativeLayout>
+    
+    <ScrollView 
+    	android:layout_width="match_parent" android:layout_height="match_parent" 
+    	android:padding="0px" android:fillViewport="true" >
+        
+        <LinearLayout 
+		    android:layout_width="fill_parent" android:layout_height="wrap_content"
+		    android:orientation="vertical" android:background="@color/transparente" >
+    
+		    <TextView 
+			      android:id="@+id/configCamera_tv_barra"
+			      android:layout_width="fill_parent" android:layout_height="20sp" 
+			      style="@style/estilo_textview_divisaoLista"
+			      android:text="@string/configcenario_barra" />
+		    
+		    <CheckBox 
+		       android:id="@+id/configCenario_ck_ativar" 
+		       android:layout_width="match_parent" android:layout_height="wrap_content" 
+		       android:text="@string/configcenario_ativar" />
+		
+		    <RadioGroup 
+		        android:layout_width="fill_parent" android:layout_height="wrap_content" 
+		        android:orientation="vertical" >
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_nenhumAcionamento" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_nenhumacionamento"  />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_controleAutomatico" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_controleautomatico"  />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_detectarFace" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_detectarface" />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_reconhecerFace" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_reconhecerface" />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_alarme" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_alarme"  />
+		        
+		        <RadioButton 
+		            android:id="@+id/configCenario_movimento" 
+		            android:layout_width="wrap_content" android:layout_height="wrap_content" 
+		            android:text="@string/configcenario_movimento"  />
+		        
+		    </RadioGroup>
+		    
+		    <LinearLayout 
+			    android:layout_width="fill_parent" android:layout_height="wrap_content"
+			    android:orientation="horizontal" android:background="@color/transparente" >
+		
+		        <Button 
+			         android:id="@+id/configCenario_bt_salvar"
+			         android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			         android:text="@string/configcenario_salvar" />
+			    
+		        <Button 
+			         android:id="@+id/configCenario_bt_cancelar"
+			         android:layout_width="wrap_content" android:layout_height="wrap_content" 
+			         android:text="@string/configcenario_cancelar" />
+		
+		    </LinearLayout>
+		    
+		</LinearLayout>
+    
+    </ScrollView>
+
+</LinearLayout>

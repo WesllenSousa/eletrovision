@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="predio" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="049e792d-3b10-45a1-b047-54b4cab73529">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="135"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="diretorio" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="codigo" class="java.lang.Integer"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="foto" class="java.lang.String"/>
+	<field name="tipo" class="java.lang.String"/>
+	<field name="deletado" class="java.lang.String"/>
+	<field name="codendereco.estado" class="java.lang.String"/>
+	<field name="codendereco.cidade" class="java.lang.String"/>
+	<field name="codendereco.logradouro" class="java.lang.String"/>
+	<field name="codendereco.bairro" class="java.lang.String"/>
+	<field name="codendereco.numero" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="a4e3e72f-dc95-4e6a-b128-4c96fe71840d" x="154" y="19" width="246" height="38"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Prédios Cadastrados]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="204" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="6aca0c66-694f-476d-91dc-2ec3a3a1173a" x="37" y="10" width="46" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="caed0bc2-9507-4628-945a-05d7b02e7532" x="43" y="30" width="40" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="53" y="50" width="30" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="f4cb3c1f-94b2-428d-889d-b53dced48e35" x="87" y="10" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="e0c49775-cad1-41b2-9f30-969ab4fbadd6" x="87" y="30" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="cae61210-eb61-4a41-85bf-0663f939f9fd" x="87" y="50" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{tipo}]]></textFieldExpression>
+			</textField>
+			<image>
+				<reportElement uuid="50c40a00-3931-4551-ac59-558bc2290227" x="455" y="10" width="100" height="98"/>
+				<imageExpression><![CDATA[$P{diretorio} + "/" + $F{foto}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="28" y="70" width="55" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Deletado:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="2e6e410b-1f70-4309-bae3-0adb9feee22c" x="87" y="70" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{deletado}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="38" y="90" width="45" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="38" y="110" width="45" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cidade:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="43" y="129" width="40" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Bairro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="10" y="149" width="73" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Logradouro:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f48e889c-e321-49db-947d-39bc58422b05" x="33" y="169" width="50" height="20"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Número:]]></text>
+			</staticText>
+			<textField>
+				<reportElement uuid="407a297b-0b4d-4bea-abc5-8d701234bfaa" x="87" y="90" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codendereco.estado} != null ? $F{codendereco.estado} : "" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b7cfc8af-72aa-423c-b7d0-3345fdd89781" x="87" y="110" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codendereco.cidade} != null ? $F{codendereco.cidade} : "" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c480d6e0-ca5d-47c5-8d89-ef2079d5c477" x="87" y="130" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codendereco.bairro} != null ? $F{codendereco.bairro} : "" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="060e8c96-d970-41bd-a06b-27c8240d486f" x="87" y="150" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codendereco.logradouro} != null ? $F{codendereco.logradouro} : "" )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="be38ca32-d072-45cb-8622-bd881461d5dd" x="87" y="170" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[( $F{codendereco.numero} != null ? $F{codendereco.numero} : "" )]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="e04be7ae-d87d-4aed-a0ed-7519727dec29" x="10" y="10" width="197" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3408baa1-a664-47cf-af9b-74e608426569" x="425" y="10" width="80" height="20" forecolor="#010101"/>
+				<textElement textAlignment="Right">
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="fa1bbf6b-0dae-40f2-8da6-ab44eddc7bdd" x="505" y="10" width="40" height="20" forecolor="#010101"/>
+				<textElement>
+					<font fontName="SansSerif" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

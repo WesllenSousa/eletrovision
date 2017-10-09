@@ -1,0 +1,55 @@
+
+package entidades.email.bean;
+
+import entidades.telefone.bean.*;
+
+/**
+ *
+ * @author hendrio
+ */
+public enum EnumEnviarAutomaticoEmail {
+    
+    ENVIAR(0, "Enviar Mensagem"),
+    NAOENVIAR(1, "Não Enviar Mensagem");
+    
+    private Integer ordem;
+    private String descricao;
+    
+    private EnumEnviarAutomaticoEmail(Integer ordem, String descricao){
+        this.ordem = ordem;
+        this.descricao = descricao;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public Integer getOrdem() {
+        return ordem;
+    }
+
+    public void setOrdem(Integer ordem) {
+        this.ordem = ordem;
+    }
+    
+    @Override
+    public String toString() {
+        return this.descricao;
+    }
+    
+    public static EnumEnviarAutomaticoEmail parse(int ordem) {  
+         EnumEnviarAutomaticoEmail enumn = null;   
+         for (EnumEnviarAutomaticoEmail item : EnumEnviarAutomaticoEmail.values()) {  
+             if (item.getOrdem() == ordem) {  
+                 enumn = item;  
+                 break;  
+             }  
+         }  
+         return enumn;  
+     }
+    
+}
